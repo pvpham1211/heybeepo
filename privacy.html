@@ -16,8 +16,9 @@
 
   <p>Last updated: October 29, 2026</p>
 
-  <p>Hey Beepo Publisher is a private tool used only by the owner of the Hey Beepo channel to upload their own
-    videos to their own TikTok account. It has no other users and collects no data about anyone else.</p>
+  <p>Hey Beepo Publisher (registered with Google as "shorts-pipeline") is a private tool used only by the owner of
+    the Hey Beepo channel to publish their own videos to their own TikTok account and YouTube channel. It has no
+    other users and collects no data about anyone else.</p>
 
   <h2>What it accesses on TikTok, with the account owner's permission</h2>
   <ul>
@@ -27,19 +28,50 @@
     <li>The list of the owner's own videos (video.list), to confirm an upload arrived.</li>
   </ul>
 
+  <h2>What it accesses on Google, with the account owner's permission</h2>
+  <ul>
+    <li>Google Drive (drive.file): uploads preview and cover images of each finished video to a folder in the
+      owner's own Drive, so the owner can review them. It can only see files the tool itself created.</li>
+    <li>YouTube (youtube.upload): uploads the owner's approved videos to the owner's own channel, with title,
+      description, thumbnail and a scheduled publish time.</li>
+    <li>YouTube (youtube.readonly): reads the status and public counts (views, likes, comment count) of the
+      owner's own videos, and checks the owner's channel.</li>
+    <li>YouTube Analytics (yt-analytics.readonly): reads the owner's own channel analytics (views, watch time,
+      engagement and retention) for the owner's own statistics and reports.</li>
+    <li>YouTube (youtube.force-ssl): sets one of the owner's own scheduled videos to private when the owner
+      rejects it, and reads comments on the owner's own videos. It never posts, edits or deletes comments.</li>
+  </ul>
+
   <h2>Where data is kept</h2>
-  <p>The sign-in tokens TikTok issues are stored only on the owner's own computer. They are not sent to any other
-    service or person.</p>
+  <p>The sign-in tokens TikTok and Google issue are stored only on the owner's own computer and are never
+    uploaded. Other results go into the owner's own Google Sheet and local files.</p>
+
+  <h2>Data sent to an AI service</h2>
+  <p>Two limited kinds of Google data are sent to Anthropic's Claude API, only to produce the owner's own
+    summaries:</p>
+  <ul>
+    <li>The text of comments on the owner's own videos, without author names or IDs, to sort them into
+      questions, praise, complaints and spam.</li>
+    <li>Aggregated channel numbers (counts and averages per topic, format and hour, with no viewer data), to write
+      the monthly report's recommendations in plain English.</li>
+  </ul>
+  <p>Google user data is not used to develop, improve or train generalized AI or machine learning models.</p>
 
   <h2>Sharing</h2>
-  <p>No data is sold, shared, or used for advertising or analytics.</p>
+  <p>Apart from the Claude API use described above, no data is shared with anyone. No data is sold or used for
+    advertising. Viewer-level personal data is not collected.</p>
+  <p>Hey Beepo Publisher's use and transfer of information received from Google APIs adheres to the
+    <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data
+    Policy</a>, including the Limited Use requirements.</p>
 
   <h2>Viewers</h2>
   <p>The tool does not collect any information about people who watch Hey Beepo videos. TikTok's own Privacy
     Policy applies to anyone using TikTok.</p>
 
   <h2>Removing access</h2>
-  <p>The owner can disconnect the tool at any time in TikTok's settings, which also stops all access.</p>
+  <p>The owner can disconnect the tool at any time in TikTok's settings or at
+    <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>, which stops its
+    access.</p>
 
   <h2>Contact</h2>
   <p><a href="mailto:pvpham1211@gmail.com">pvpham1211@gmail.com</a></p>
